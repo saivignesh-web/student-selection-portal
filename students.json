@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Adithya",
+    "rollNumber": "23AIDS001",
+    "department": "Artificial Intelligence and Data Science",
+    "year": 2,
+    "about": "AI and Data Science student passionate about building innovative software and AI solutions.",
+    "skills": [
+      "C",
+      "C++",
+      "HTML",
+      "JavaScript"
+    ],
+    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/",
+    "photo": ""
+  },
+  {
+    "id": 2,
+    "name": "Sai vignesh",
+    "rollNumber": "2025cs1131",
+    "department": "Computer Science and Engineering",
+    "year": 3,
+    "about": "AI data science and software work places",
+    "skills": [
+      "C",
+      "C++",
+      "HTML",
+      "JavaScript"
+    ],
+    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/",
+    "photo": ""
+  },
+  {
+    "id": 3,
+    "name": "Varun",
+    "rollNumber": "2025cs9990",
+    "department": "ECE",
+    "year": 1,
+    "about": "electrical engineering enthusiastic",
+    "skills": [
+      "hard ware  management",
+      "robotics"
+    ],
+    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/",
+    "photo": ""
+  },
+  {
+    "id": 4,
+    "name": "Rahul Kumar",
+    "rollNumber": "2025cs0999",
+    "department": "Artificial Intelligence and Data Science",
+    "year": 1,
+    "about": "AI",
+    "skills": [
+      "C"
+    ],
+    "github": "",
+    "linkedin": "",
+    "photo": ""
+  }
+]

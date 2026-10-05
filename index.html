@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Selection Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- TOP BAR -->
+        <header class="top-bar">
+
+            <div class="title-area">
+                <h1>Student Selection Portal</h1>
+                <p>FORESE Development Team</p>
+            </div>
+
+            <button
+                id="addStudentButton"
+                class="add-button"
+                type="button"
+            >
+                + Add Student
+            </button>
+
+        </header>
+        <section class="student-list-section">
+
+    <h2>Students</h2>
+
+    <div class="search-bar">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by name, roll number or department..."
+        >
+    </div>
+
+    <div
+        id="studentList"
+        class="student-list"
+    ></div>
+
+</section>
+    
+
+        <!-- STUDENT LIST -->
+        <section class="student-list-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Students</h2>
+                    <p>Select a student to view their profile</p>
+                </div>
+            </div>
+
+            <div
+                id="studentList"
+                class="student-list"
+            ></div>
+
+        </section>
+
+
+        <!-- PROFILE -->
+        <section
+            class="profile-card"
+            id="profileCard"
+        >
+
+            <!-- PROFILE HEADER -->
+            <div class="profile-header">
+
+                <div class="profile-image">
+
+                    <img
+                        id="profileImage"
+                        src=""
+                        alt="Profile Photo"
+                    >
+
+                    <span id="profileInitials">AD</span>
+
+                </div>
+
+                <div class="profile-info">
+
+                    <h1 id="studentName">
+                        Loading...
+                    </h1>
+
+                    <p id="studentDepartment">
+                        Loading...
+                    </p>
+
+                    <span
+                        id="studentYear"
+                        class="year-badge"
+                    >
+                        Year -
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ABOUT -->
+            <div class="section">
+
+                <h2>About</h2>
+
+                <p id="studentAbout">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <!-- SKILLS -->
+            <div class="section">
+
+                <h2>Skills</h2>
+
+                <div
+                    id="skillsContainer"
+                    class="skills"
+                ></div>
+
+            </div>
+
+
+            <!-- CONNECT -->
+            <div class="section">
+
+                <h2>Connect</h2>
+
+                <div class="social-links">
+
+                    <a
+                        id="githubLink"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                    <a
+                        id="linkedinLink"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+            <div class="profile-actions">
+
+                <button
+                    id="editButton"
+                    class="edit-button"
+                    type="button"
+                >
+                    Edit Profile
+                </button>
+
+                <button
+                    id="deleteButton"
+                    class="delete-button"
+                    type="button"
+                >
+                    Delete Student
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- EDIT / ADD MODAL -->
+    <div
+        id="editModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <!-- MODAL HEADER -->
+            <div class="modal-header">
+
+                <div>
+                    <h2 id="modalTitle">Edit Profile</h2>
+                    <p>Update student information</p>
+                </div>
+
+                <button
+                    id="closeModal"
+                    class="close-button"
+                    type="button"
+                >
+                    &times;
+                </button>
+
+            </div>
+
+
+            <!-- FORM -->
+            <form id="profileForm">
+
+                <!-- NAME -->
+                <label for="nameInput">
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="nameInput"
+                    placeholder="Enter student name"
+                    required
+                >
+
+
+                <!-- ROLL NUMBER -->
+                <label for="rollNumberInput">
+                    Roll Number
+                </label>
+
+                <input
+                    type="text"
+                    id="rollNumberInput"
+                    placeholder="Example: 23CSE001"
+                    required
+                >
+
+
+                <!-- DEPARTMENT -->
+                <label for="departmentInput">
+                    Department
+                </label>
+
+                <input
+                    type="text"
+                    id="departmentInput"
+                    placeholder="Example: CSE"
+                    required
+                >
+
+
+                <!-- YEAR -->
+                <label for="yearInput">
+                    Year
+                </label>
+
+                <select
+                    id="yearInput"
+                    required
+                >
+                    <option value="1">Year 1</option>
+                    <option value="2">Year 2</option>
+                    <option value="3">Year 3</option>
+                    <option value="4">Year 4</option>
+                </select>
+
+
+                <!-- ABOUT -->
+                <label for="aboutInput">
+                    About
+                </label>
+
+                <textarea
+                    id="aboutInput"
+                    rows="4"
+                    placeholder="Tell us about the student..."
+                    required
+                ></textarea>
+
+
+                <!-- PHOTO -->
+                <label for="photoInput">
+                    Profile Photo
+                </label>
+
+                <input
+                    type="file"
+                    id="photoInput"
+                    accept="image/*"
+                >
+
+                <button
+                    type="button"
+                    id="removePhotoButton"
+                    class="remove-photo-button"
+                >
+                    Remove Photo
+                </button>
+
+
+                <!-- SKILLS -->
+                <label for="skillsInput">
+                    Skills
+                </label>
+
+                <input
+                    type="text"
+                    id="skillsInput"
+                    placeholder="C, C++, HTML, JavaScript"
+                    required
+                >
+
+
+                <!-- GITHUB -->
+                <label for="githubInput">
+                    GitHub URL
+                </label>
+
+                <input
+                    type="url"
+                    id="githubInput"
+                    placeholder="https://github.com/"
+                >
+
+
+                <!-- LINKEDIN -->
+                <label for="linkedinInput">
+                    LinkedIn URL
+                </label>
+
+                <input
+                    type="url"
+                    id="linkedinInput"
+                    placeholder="https://www.linkedin.com/"
+                >
+
+
+                <!-- SAVE -->
+                <button
+                    type="submit"
+                    class="save-button"
+                >
+                    Save Student
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
